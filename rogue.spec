@@ -1,5 +1,5 @@
-Summary:	The game that started roguelike genre.
-Summary(pl):	Gra, która zapocz±tkowa³a gatunek roguelike.
+Summary:	The game that started roguelike genre
+Summary(pl):	Gra, która zapocz±tkowa³a gatunek roguelike
 Name:		rogue
 Version:	5.3
 Release:	8
