@@ -2,14 +2,15 @@ Summary:	The game that started roguelike genre.
 Summary(pl):	Gra, która zapocz±tkowa³a gatunek roguelike.
 Name:		rogue
 Version:	5.3
-Release:	6
+Release:	7
 License:	GPL
 Group:		Applications/Games
 Source0:	http://yarws.kid.waw.pl/files/%{name}.tar.z
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Source3:	http://yarws.kid.waw.pl/files/%{name}_spoiler.zip
-Source4:	http://home.wanadoo.nl/loche/rogue/guide.txt
+# renamed http://home.wanadoo.nl/loche/rogue/guide.txt
+Source4:	%{name}-guide.txt
 Patch0:		%{name}-rip_time.patch
 Patch1:		%{name}-ldflags.patch
 URL:		http://home.wanadoo.nl/loche/rogue/
