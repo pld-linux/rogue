@@ -81,7 +81,7 @@ install rogue $RPM_BUILD_ROOT%{_bindir}
 
 touch $RPM_BUILD_ROOT%{_datadir}/rogue.scores
 
-cp %{SOURCE4} .
+cp %{SOURCE4} guide.txt
 gzip -9nf README guide.txt
 gzip -9nf rogue.[drsw]*
 
