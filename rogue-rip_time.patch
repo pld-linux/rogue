@@ -1,0 +1,70 @@
+diff -ruN roguedupa/machdep.c rogue/machdep.c
+--- roguedupa/machdep.c	Mon Sep 28 23:10:32 1992
++++ rogue/machdep.c	Sat Feb  9 16:51:21 2002
+@@ -264,6 +264,7 @@
+ md_gct(rt_buf)
+ struct rogue_time *rt_buf;
+ {
++/*
+ 	struct timeval tv;
+ 	struct timezone tzp;
+ 	struct tm *t;
+@@ -272,13 +273,13 @@
+ 	gettimeofday(&tv, &tzp);
+ 	seconds = (long) tv.tv_sec;
+ 	t = localtime(&seconds);
+-
+-	rt_buf->year = t->tm_year;
+-	rt_buf->month = t->tm_mon + 1;
+-	rt_buf->day = t->tm_mday;
+-	rt_buf->hour = t->tm_hour;
+-	rt_buf->minute = t->tm_min;
+-	rt_buf->second = t->tm_sec;
++*/
++	rt_buf->year = 0;
++	rt_buf->month = 0;
++	rt_buf->day = 0;
++	rt_buf->hour = 0;
++	rt_buf->minute = 0;
++	rt_buf->second = 0;
+ }
+ 
+ /* md_gfmt: (Get File Modification Time)
+@@ -301,6 +302,7 @@
+ char *fname;
+ struct rogue_time *rt_buf;
+ {
++/*
+ 	struct stat sbuf;
+ 	long seconds;
+ 	struct tm *t;
+@@ -308,13 +310,13 @@
+ 	stat(fname, &sbuf);
+ 	seconds = (long) sbuf.st_mtime;
+ 	t = localtime(&seconds);
+-
+-	rt_buf->year = t->tm_year;
+-	rt_buf->month = t->tm_mon + 1;
+-	rt_buf->day = t->tm_mday;
+-	rt_buf->hour = t->tm_hour;
+-	rt_buf->minute = t->tm_min;
+-	rt_buf->second = t->tm_sec;
++*/
++	rt_buf->year = 0;
++	rt_buf->month = 0;
++	rt_buf->day = 0;
++	rt_buf->hour = 0;
++	rt_buf->minute = 0;
++	rt_buf->second = 0;
+ }
+ 
+ /* md_df: (Delete File)
+@@ -477,7 +479,7 @@
+  * implementing the routines below.  And don't compile with -DCURSES.
+  */
+ 
+-#ifdef CURSES
++#if 0
+ 
+ /* md_cbreak_no_echo_nonl:
+  *
