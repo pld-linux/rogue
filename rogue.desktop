@@ -1,12 +1,5 @@
 [Desktop Entry]
-Name=Rogue
-Name[ar]=روج
-Name[bg]=Измамник
-Name[eo]=Fripono
-Name[lt]=Išdykėlis
-Name[lv]=Blēdis
-Name[pt_BR]=Selvagem
-Name[uk]=Тать
+Name=rogue
 Comment=The very first roguelike game
 Comment[pl]=Najpierwsza gra roguelike
 Icon=rogue.png
