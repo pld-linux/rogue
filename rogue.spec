@@ -2,17 +2,19 @@ Summary:	The game that started roguelike genre.
 Summary(pl):	Gra, która zapocz±tkowa³a gatunek roguelike.
 Name:		rogue
 Version:	5.3
-Release:	4
+Release:	5
 License:	GPL
 Group:		Applications/Games
 Source0:	http://yarws.kid.waw.pl/files/%{name}.tar.z
 Source1:	%{name}.desktop
 Source2:	%{name}.png
+Source3:	http://yarws.kid.waw.pl/files/%{name}_spoiler.zip
 Patch0:		%{name}-rip_time.patch
 Patch1:		%{name}-ldflags.patch
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_bindir		/usr/games
 %define		_datadir	/var/games/rogue
 
 %description
@@ -36,8 +38,19 @@ podgatunek lochowych gier komputerowych (znanych jako 'roguelike')
 czerpi± inspiracjê z 'rogue (6)'. Popularna gra Diablo, mimo ogromnego
 ³adunku grafiki, ma bardzo podobn± logikê gry.
 
+%package spoilers
+Summary:	Spoilers for rogue
+Summary(pl):	Psuje dla rogue
+Group:		Applications/Games
+
+%description spoilers
+Spoilers for rogue.
+
+%description spoilers -l pl
+Psuje dla rogue.
+
 %prep
-%setup -q -c %{name}-%{version}
+%setup -a3 -q -c %{name}-%{version}
 %patch0 -p1
 %patch1 -p0
 
@@ -66,6 +79,7 @@ install rogue $RPM_BUILD_ROOT%{_bindir}
 touch $RPM_BUILD_ROOT%{_datadir}/rogue.scores
 
 gzip -9nf README
+gzip -9nf rogue.[drsw]*
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Roguelike
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
@@ -84,3 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_applnkdir}/Games/Roguelike/*
 %{_pixmapsdir}/*
+
+%files spoilers
+%defattr(644,root,root,755)
+%doc rogue.*.gz
