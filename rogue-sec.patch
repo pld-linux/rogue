@@ -1,0 +1,15 @@
+--- save.c.old	Wed Feb 19 02:36:48 2003
++++ save.c	Wed Feb 19 02:47:33 2003
+@@ -67,8 +67,10 @@
+ 
+ 	if (sfile[0] == '~') {
+ 		if (hptr = md_getenv("HOME")) {
+-			(void) strcpy(name_buffer, hptr);
+-			(void) strcat(name_buffer, sfile+1);
++			/* Security fix, Ulf Harnhammar 2003 */
++			(void) strncpy(name_buffer, hptr, sizeof(name_buffer));
++			(void) strncat(name_buffer, sfile+1, sizeof(name_buffer) - strlen(hptr));
++			name_buffer[sizeof(name_buffer) - 1] = '\0';
+ 			sfile = name_buffer;
+ 		}
+ 	}
