@@ -91,7 +91,7 @@ cp %{SOURCE4} guide.txt
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/RPG
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
-head -11 main.c > COPYING
+head -n 11 main.c > COPYING
 
 %define		_noautocompressdoc	usr/games/rogue.instr
 
