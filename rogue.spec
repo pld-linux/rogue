@@ -2,15 +2,17 @@ Summary:	The game that started roguelike genre.
 Summary(pl):	Gra, która zapocz±tkowa³a gatunek roguelike.
 Name:		rogue
 Version:	5.3
-Release:	5
+Release:	6
 License:	GPL
 Group:		Applications/Games
 Source0:	http://yarws.kid.waw.pl/files/%{name}.tar.z
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Source3:	http://yarws.kid.waw.pl/files/%{name}_spoiler.zip
+Source4:	http://home.wanadoo.nl/loche/rogue/guide.txt
 Patch0:		%{name}-rip_time.patch
 Patch1:		%{name}-ldflags.patch
+URL:		http://home.wanadoo.nl/loche/rogue/
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -78,7 +80,8 @@ install rogue $RPM_BUILD_ROOT%{_bindir}
 
 touch $RPM_BUILD_ROOT%{_datadir}/rogue.scores
 
-gzip -9nf README
+cp %{SOURCE4} .
+gzip -9nf README guide.txt
 gzip -9nf rogue.[drsw]*
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Roguelike
@@ -94,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(664,root,games) %config(noreplace) %verify(not md5 size mtime) %{_datadir}/rogue.scores
 
 # don't gzip rogue.instr!
-%doc usr/games/rogue.instr README.gz
+%doc usr/games/rogue.instr README.gz guide.txt.gz
 
 %{_applnkdir}/Games/Roguelike/*
 %{_pixmapsdir}/*
