@@ -6,9 +6,11 @@ Release:	9
 License:	non-commercial (see COPYING)
 Group:		Applications/Games
 Source0:	http://yarws.kid.waw.pl/files/%{name}.tar.z
+# Source0-md5:	ef3a5f46179981bb95b86d2c66ed3828
 Source1:	%{name}.desktop
 Source2:	%{name}.png
 Source3:	http://yarws.kid.waw.pl/files/%{name}_spoiler.zip
+# Source3-md5:	f09239ef39c780d043d3ba1eccea81c7
 # renamed http://home.wanadoo.nl/loche/rogue/guide.txt
 Source4:	%{name}-guide.txt
 Patch0:		%{name}-rip_time.patch
