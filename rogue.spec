@@ -5,8 +5,20 @@ Version:	5.3
 Release:	1
 License:	GPL
 Group:		Applications/Games
+Group(cs):	Aplikace/Hry
+Group(da):	Programmer/Spil
 Group(de):	Applikationen/Spiele
+Group(es):	Aplicaciones/Juegos
+Group(fr):	Applications/Jeux
+Group(is):	Forrit/Leikir
+Group(it):	Applicazioni/Giochi
+Group(ja):	•¢•◊•Í•±°º•∑•Á•Û/•≤°º•‡
+Group(no):	Applikasjoner/Spill
 Group(pl):	Aplikacje/Gry
+Group(pt):	AplicaÁıes/Jogos
+Group(ru):	“…Ãœ÷≈Œ…—/È«“Ÿ
+Group(sl):	Programi/Igre
+Group(sv):	Till‰mpningar/Spel
 Source0:	http://yarws.kid.waw.pl/files/%{name}.tar.z
 Source1:	%{name}.desktop
 Source2:	%{name}.png
@@ -16,7 +28,7 @@ Patch2:		%{name}-paths.patch
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	_datadir	/var/games/rogue
+%define		_datadir	/var/games/rogue
 
 %description
 The game that started roguelike genre.
@@ -48,7 +60,8 @@ mv -f instruct.c.new instruct.c
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_prefix}/games,%{_datadir},%{_applnkdir}/Games/Roguelike,%{_pixmapsdir}}
 
-install rogue $RPM_BUILD_ROOT%{_prefix}/games
+install rogue $RPM_BUILD_ROOT%{_bindir}
+
 touch $RPM_BUILD_ROOT%{_datadir}/rogue.scores
 
 gzip -9nf README
@@ -61,7 +74,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(2755,root,games) %{_prefix}/games/*
+%attr(2755,root,games) %{_bindir}/*
 %attr(2775,root,games) %dir %{_datadir}
 %attr(664,root,games) %config(noreplace) %verify(not md5 size mtime) %{_datadir}/rogue.scores
 
