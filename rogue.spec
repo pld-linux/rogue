@@ -58,7 +58,7 @@ mv -f instruct.c.new instruct.c
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_prefix}/games,%{_datadir},%{_applnkdir}/Games/Roguelike,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir},%{_applnkdir}/Games/Roguelike,%{_pixmapsdir}}
 
 install rogue $RPM_BUILD_ROOT%{_bindir}
 
