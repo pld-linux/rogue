@@ -1,0 +1,11 @@
+--- Makefiledupa	Thu Dec 10 00:06:16 1992
++++ Makefile	Sat Feb  9 16:53:54 2002
+@@ -13,7 +13,7 @@
+ CFLAGS = -c -DUNIX -DUNIX_SYS5 -DCURSES
+ 
+ rogue: $(ROGUE_OBJS)
+-	$(CC) $(ROGUE_OBJS) -o rogue
++	$(CC) $(ROGUE_OBJS) $(LDFLAGS) -o rogue
+ 
+ curses.o: curses.c rogue.h
+ 	$(CC) $(CFLAGS) curses.c
