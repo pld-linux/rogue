@@ -16,10 +16,25 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_datadir	/var/games/rogue
 
 %description
-The game that started roguelike genre.
+A Dungeons-and-Dragons-like game using character graphics, written
+under BSD Unix and subsequently ported to other Unix systems. The
+original BSD `curses(3)' screen-handling package was hacked together
+by Ken Arnold primarily to support games, and the development of
+`rogue(6)' popularized its use. Nethack, Omega, Larn, Angband, and an
+entire subgenre of computer dungeon games (all known as `roguelikes')
+all took off from the inspiration provided by `rogue(6)'; the popular
+Windows game Diablo, though graphics-intensive, has very similar play
+logic.
 
 %description -l pl
-Gra, która zapocz±tkowa³a gatunek roguelike.
+Gra czerpi±ca z Dungeons and Dragons u¿ywaj±ca znakowej grafiki,
+napisana pod Uniksem BSD, a nastêpnie portowana na inne systemy
+Uniksowe. Pocz±tkowa biblioteka obs³ugi ekranu 'curses (3)' by³a
+hackowana wspólnie z Kenem Arnoldem g³ównie by wspieraæ gry, a rozwój
+'rogue (6)' spopularyzowa³ j±. Nethack, Omega, Larn, Angband i ca³y
+podgatunek lochowych gier komputerowych (znanych jako 'roguelike')
+czerpi± inspiracjê z 'rogue (6)'. Popularna gra Diablo, mimo ogromnego
+³adunku grafiki, ma bardzo podobn± logikê gry.
 
 %prep
 %setup -q -c %{name}-%{version}
