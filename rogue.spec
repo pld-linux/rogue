@@ -24,7 +24,6 @@ Source1:	%{name}.desktop
 Source2:	%{name}.png
 Patch0:		%{name}-rip_time.patch
 Patch1:		%{name}-ldflags.patch
-Patch2:		%{name}-paths.patch
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -40,7 +39,6 @@ Gra, która zapocz±tkowa³a gatunek roguelike.
 %setup -q -c %{name}-%{version}
 %patch0 -p1
 %patch1 -p0
-%patch2 -p1
 
 %build
 for i in *.[ch]
@@ -49,8 +47,10 @@ do
 	cat $i.new | sed 's/^#ifndef CURSES/#if 1/g' > $i
 	rm $i.new
 done
-cat instruct.c | sed 's@%{_datadir}@%{_prefix}/share/doc/%{name}-%{version}@' > instruct.c.new
+cat instruct.c | sed 's@%{_prefix}/games@%{_prefix}/share/doc/%{name}-%{version}@' > instruct.c.new
+cat score.c | sed 's@%{_prefix}/games@%{_datadir}@' > score.c.new
 mv -f instruct.c.new instruct.c
+mv -f score.c.new score.c
 
 %{__make} CC="%{__cc}" \
 	CFLAGS="%{rpmcflags} -DUNIX -DUNIX_SYS5 -I%{_includedir}/ncurses -c" \
