@@ -79,7 +79,7 @@ mv -f score.c.new score.c
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir},%{_applnkdir}/Games/RPG,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir},%{_desktopdir},%{_pixmapsdir}}
 
 install rogue $RPM_BUILD_ROOT%{_bindir}
 
@@ -87,7 +87,7 @@ touch $RPM_BUILD_ROOT%{_datadir}/rogue.scores
 
 cp %{SOURCE4} guide.txt
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/RPG
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 head -n 11 main.c > COPYING
@@ -106,7 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 # don't gzip rogue.instr!
 %doc usr/games/rogue.instr README guide.txt COPYING
 
-%{_applnkdir}/Games/RPG/*
+%{_desktopdir}/*
 %{_pixmapsdir}/*
 
 %files spoilers
