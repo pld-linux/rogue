@@ -83,11 +83,11 @@ install rogue $RPM_BUILD_ROOT%{_bindir}
 touch $RPM_BUILD_ROOT%{_datadir}/rogue.scores
 
 cp %{SOURCE4} guide.txt
-gzip -9nf README guide.txt
-gzip -9nf rogue.[drsw]*
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/RPG
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+
+%define		_noautocompressdoc	usr/games/rogue.instr
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -99,11 +99,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(664,root,games) %config(noreplace) %verify(not md5 size mtime) %{_datadir}/rogue.scores
 
 # don't gzip rogue.instr!
-%doc usr/games/rogue.instr README.gz guide.txt.gz
+%doc usr/games/rogue.instr README guide.txt
 
 %{_applnkdir}/Games/RPG/*
 %{_pixmapsdir}/*
 
 %files spoilers
 %defattr(644,root,root,755)
-%doc rogue.*.gz
+%doc rogue.*
