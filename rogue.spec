@@ -2,7 +2,7 @@ Summary:	The game that started roguelike genre
 Summary(pl):	Gra, która zapocz±tkowa³a gatunek roguelike
 Name:		rogue
 Version:	5.3
-Release:	9
+Release:	10
 License:	non-commercial (see COPYING)
 Group:		Applications/Games
 Source0:	http://yarws.kid.waw.pl/files/%{name}.tar.z
@@ -21,7 +21,6 @@ BuildRequires:	ncurses-devel
 Conflicts:	applnk < 1.5.13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_bindir		/usr/games
 %define		_datadir	/var/games/rogue
 
 %description
