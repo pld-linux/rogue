@@ -18,6 +18,7 @@ Patch1:		%{name}-ldflags.patch
 Patch2:		%{name}-sec.patch
 URL:		http://home.wanadoo.nl/loche/rogue/
 BuildRequires:	ncurses-devel
+BuildRequires:	unzip
 Conflicts:	applnk < 1.5.13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
