@@ -2,8 +2,8 @@ Summary:	The game that started roguelike genre
 Summary(pl):	Gra, która zapocz±tkowa³a gatunek roguelike
 Name:		rogue
 Version:	5.3
-Release:	8
-License:	GPL
+Release:	9
+License:	non-commercial (see COPYING)
 Group:		Applications/Games
 Source0:	http://yarws.kid.waw.pl/files/%{name}.tar.z
 Source1:	%{name}.desktop
@@ -13,6 +13,7 @@ Source3:	http://yarws.kid.waw.pl/files/%{name}_spoiler.zip
 Source4:	%{name}-guide.txt
 Patch0:		%{name}-rip_time.patch
 Patch1:		%{name}-ldflags.patch
+Patch2:		%{name}-sec.patch
 URL:		http://home.wanadoo.nl/loche/rogue/
 BuildRequires:	ncurses-devel
 Requires:	applnk >= 1.5.13
@@ -57,6 +58,7 @@ Psuje dla rogue.
 %setup -a3 -q -c %{name}-%{version}
 %patch0 -p1
 %patch1 -p0
+%patch2 -p0
 
 %build
 for i in *.[ch]
@@ -87,6 +89,8 @@ cp %{SOURCE4} guide.txt
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/RPG
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 
+head -11 main.c > COPYING
+
 %define		_noautocompressdoc	usr/games/rogue.instr
 
 %clean
@@ -99,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(664,root,games) %config(noreplace) %verify(not md5 size mtime) %{_datadir}/rogue.scores
 
 # don't gzip rogue.instr!
-%doc usr/games/rogue.instr README guide.txt
+%doc usr/games/rogue.instr README guide.txt COPYING
 
 %{_applnkdir}/Games/RPG/*
 %{_pixmapsdir}/*
