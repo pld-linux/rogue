@@ -37,7 +37,7 @@ logic.
 %description -l pl
 Gra czerpi±ca z Dungeons and Dragons u¿ywaj±ca znakowej grafiki,
 napisana pod Uniksem BSD, a nastêpnie portowana na inne systemy
-Uniksowe. Pocz±tkowa biblioteka obs³ugi ekranu 'curses (3)' by³a
+uniksowe. Pocz±tkowa biblioteka obs³ugi ekranu 'curses (3)' by³a
 hackowana wspólnie z Kenem Arnoldem g³ównie by wspieraæ gry, a rozwój
 'rogue (6)' spopularyzowa³ j±. Nethack, Omega, Larn, Angband i ca³y
 podgatunek lochowych gier komputerowych (znanych jako 'roguelike')
