@@ -13,5 +13,6 @@ Icon=rogue.png
 Exec=/usr/games/rogue
 Terminal=true
 Type=Application
+Categories=Game;X-RPGGame;
 Encoding=UTF-8
 # vi: encoding=utf-8
