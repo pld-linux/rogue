@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=rogue
+Comment=The very first roguelike game
+Comment[pl]=Najpierwsza gra roguelike
+Icon=rogue.png
+Exec=/usr/games/rogue
+Terminal=1
+Type=Application
