@@ -102,7 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(2755,root,games) %{_bindir}/*
 %attr(2775,root,games) %dir %{_datadir}
-%attr(664,root,games) %config(noreplace) %verify(not md5 size mtime) %{_datadir}/rogue.scores
+%attr(664,root,games) %config(noreplace) %verify(not md5 mtime size) %{_datadir}/rogue.scores
 
 # don't gzip rogue.instr!
 %doc usr/games/rogue.instr README guide.txt COPYING
