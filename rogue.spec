@@ -75,7 +75,7 @@ mv -f instruct.c.new instruct.c
 mv -f score.c.new score.c
 
 %{__make} CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} -DUNIX -DUNIX_SYS5 -I%{_includedir}/ncurses -c" \
+	CFLAGS="%{rpmcflags} -DUNIX -DUNIX_SYS5 -I/usr/include/ncurses -c" \
 	LDFLAGS="%{rpmldflags} -lncurses"
 
 %install
