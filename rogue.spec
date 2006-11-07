@@ -107,7 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 # don't gzip rogue.instr!
 %doc usr/games/rogue.instr README guide.txt COPYING
 
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
 
 %files spoilers
