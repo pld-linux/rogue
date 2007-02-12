@@ -1,5 +1,5 @@
 Summary:	The game that started roguelike genre
-Summary(pl):	Gra, która zapocz±tkowa³a gatunek roguelike
+Summary(pl.UTF-8):   Gra, ktÃ³ra zapoczÄ…tkowaÅ‚a gatunek roguelike
 Name:		rogue
 Version:	5.3
 Release:	11
@@ -35,25 +35,25 @@ all took off from the inspiration provided by `rogue(6)'; the popular
 Windows game Diablo, though graphics-intensive, has very similar play
 logic.
 
-%description -l pl
-Gra czerpi±ca z Dungeons and Dragons u¿ywaj±ca znakowej grafiki,
-napisana pod Uniksem BSD, a nastêpnie portowana na inne systemy
-uniksowe. Pocz±tkowa biblioteka obs³ugi ekranu 'curses (3)' by³a
-hackowana wspólnie z Kenem Arnoldem g³ównie by wspieraæ gry, a rozwój
-'rogue (6)' spopularyzowa³ j±. Nethack, Omega, Larn, Angband i ca³y
+%description -l pl.UTF-8
+Gra czerpiÄ…ca z Dungeons and Dragons uÅ¼ywajÄ…ca znakowej grafiki,
+napisana pod Uniksem BSD, a nastÄ™pnie portowana na inne systemy
+uniksowe. PoczÄ…tkowa biblioteka obsÅ‚ugi ekranu 'curses (3)' byÅ‚a
+hackowana wspÃ³lnie z Kenem Arnoldem gÅ‚Ã³wnie by wspieraÄ‡ gry, a rozwÃ³j
+'rogue (6)' spopularyzowaÅ‚ jÄ…. Nethack, Omega, Larn, Angband i caÅ‚y
 podgatunek lochowych gier komputerowych (znanych jako 'roguelike')
-czerpi± inspiracjê z 'rogue (6)'. Popularna gra Diablo, mimo ogromnego
-³adunku grafiki, ma bardzo podobn± logikê gry.
+czerpiÄ… inspiracjÄ™ z 'rogue (6)'. Popularna gra Diablo, mimo ogromnego
+Å‚adunku grafiki, ma bardzo podobnÄ… logikÄ™ gry.
 
 %package spoilers
 Summary:	Spoilers for rogue
-Summary(pl):	Psuje dla rogue
+Summary(pl.UTF-8):   Psuje dla rogue
 Group:		Applications/Games
 
 %description spoilers
 Spoilers for rogue.
 
-%description spoilers -l pl
+%description spoilers -l pl.UTF-8
 Psuje dla rogue.
 
 %prep
