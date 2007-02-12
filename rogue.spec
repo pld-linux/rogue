@@ -1,5 +1,5 @@
 Summary:	The game that started roguelike genre
-Summary(pl.UTF-8):   Gra, która zapoczątkowała gatunek roguelike
+Summary(pl.UTF-8):	Gra, która zapoczątkowała gatunek roguelike
 Name:		rogue
 Version:	5.3
 Release:	11
@@ -47,7 +47,7 @@ czerpią inspirację z 'rogue (6)'. Popularna gra Diablo, mimo ogromnego
 
 %package spoilers
 Summary:	Spoilers for rogue
-Summary(pl.UTF-8):   Psuje dla rogue
+Summary(pl.UTF-8):	Psuje dla rogue
 Group:		Applications/Games
 
 %description spoilers
