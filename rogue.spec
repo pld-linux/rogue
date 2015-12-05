@@ -2,7 +2,7 @@ Summary:	The game that started roguelike genre
 Summary(pl.UTF-8):	Gra, która zapoczątkowała gatunek roguelike
 Name:		rogue
 Version:	5.3
-Release:	13
+Release:	14
 License:	non-commercial (see COPYING)
 Group:		Applications/Games
 Source0:	http://yarws.kid.waw.pl/files/%{name}.tar.z
